@@ -6,21 +6,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.EgresadoDao;
-import dao.ProgramaDao;
-import egresados.Egresado;
+import dao.UsuarioDao;
 import egresados.Programa;
+import egresados.Usuario;
 
 /**
- * Servlet implementation class registrarrgresado
+ * Servlet implementation class Registrar
  */
-public class RegistrarEgresado extends HttpServlet {
+public class Registrar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegistrarEgresado() {
+    public Registrar() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,46 +36,24 @@ public class RegistrarEgresado extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Egresado e = new Egresado();
-		
+		Usuario u=new Usuario();
 		String clave=request.getParameter("clave");
-		e.setClave(clave);
-		
-		String codigo=request.getParameter("codigo");
-		e.setCodigo(codigo);
-		
+		u.setClave(clave);
 		String email=request.getParameter("email");
-		e.setEmail(email);
-		
+		u.setEmail(email);
 		String nombre=request.getParameter("nombre");
-		e.setNombre(nombre);
-		
-		String perfil=request.getParameter("perfil");
-		e.setPerfil(perfil);
-		
-		String documento=request.getParameter("documento");
-		e.setDocumento(documento);
-		
-		String telefono=request.getParameter("telefono");
-		e.setTelefono(telefono);
-		
-		System.out.println(request.getParameter("codPrograma"));
+		u.setNombre(nombre);
+		String usuario=request.getParameter("usuario");
+		u.setUsuario(usuario);
 		
 		int codPrograma=Integer.parseInt(request.getParameter("codPrograma"));
-		Programa p;
-		ProgramaDao pDao=new ProgramaDao();
-		p=pDao.find(codPrograma);
-		e.setProgramaBean(p);
+		Programa p=new Programa ();
+		u.setProgramaBean(p);
 		
-		e.setValidado((byte)0);
+		UsuarioDao uDao = new UsuarioDao();
 		
-		
-		EgresadoDao eDao = new EgresadoDao();
-		eDao.insert(e);
-		
-		
-		
-		response.sendRedirect(request.getContextPath()+"/login.jsp");
+		uDao.insert(u);
+	    response.sendRedirect("");
 	}
 
 }
