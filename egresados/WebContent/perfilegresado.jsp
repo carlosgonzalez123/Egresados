@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Registrar egresado | UFPS</title>
+	<title>Perfil egresado | UFPS</title>
 
 	<link rel="stylesheet" type="text/css" href="iconos/style.css">
 	<link rel="icon" type="ico/png" href="imagen/logoufps.png">
@@ -60,8 +60,8 @@
 				<div class="contenedor-cmp">
 					<p class="txtform txtposition">Programa</p>
 					<select class="cmpform" name="transporte">
-						<option>Coche</option>
-						<option>Avión</option>
+						<option>Lorem ipsum</option>
+						<option>Lorem ipsum</option>
 					</select>
 				</div>
 			</div>
