@@ -21,7 +21,7 @@
 		<img class="img-slider-login" src="imagen/portada.jpg">
 	</article>
 
-	<div class="container-form">
+	<form class="container-form">
 		<p class="txtlogin">Información del correo</p>
 		<div class="container-cmp">
 			<div class="contenedor-cmp">
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<button class="btn red txtwhite">Enviar</button>
-	</div>
+	</form>
 </section>
 
 </body>
