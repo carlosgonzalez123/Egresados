@@ -42,6 +42,7 @@
 			</div>
 		</div>
 		<button class="btn red txtwhite">Continuar</button>
+		<button class="btn gris txtwhite">Recuperar contraseña</button>
 	</div>
 </section>
 
