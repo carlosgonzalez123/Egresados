@@ -40,11 +40,21 @@ public class InsertarExperiencia extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Egresado eg = new Egresado();
+		eg.setCodigo("1151618");
+		eg.setId(1);	
+		eg.setEmail("jhoan@hotmail.com");
+		eg.setNombre("Jhoan");
+		
 		Experiencia ex = new Experiencia();
 		ExperienciaDao exDao = new ExperienciaDao();
 		String user = request.getParameter("id");
-
-		HttpSession sesion = null;
+		
+		
+		HttpSession sesion = request.getSession();
+		
+		sesion.setAttribute("usuario", eg);
 		
 		Egresado e = new Egresado();
 		e.setId(Integer.parseInt((String) sesion.getAttribute("id")));

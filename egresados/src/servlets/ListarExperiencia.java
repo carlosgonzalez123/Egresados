@@ -1,8 +1,11 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.EgresadoDao;
 import dao.ExperienciaDao;
 import egresados.Egresado;
 import egresados.Experiencia;
@@ -41,24 +45,26 @@ public class ListarExperiencia extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType( "text/html; charset=iso-8859-1" );
+		PrintWriter out = response.getWriter();
+		
+		List<Experiencia> exp =new ArrayList<Experiencia>();
 		Experiencia ex = new Experiencia();
 		ExperienciaDao exDao = new ExperienciaDao();		
 		HttpSession sesion = null;	
 		Egresado e = new Egresado();
+		EgresadoDao egDao= new EgresadoDao();
 		e.setId(Integer.parseInt((String) sesion.getAttribute("id")));
+		e = egDao.find(e.getId());
+		System.out.print(e.getNombre());
+		exp =   e.getExperiencias();
 		
-		ArrayList<Experiencia> exp =new ArrayList<Experiencia>();
+		String hola="hola";
+		request.setAttribute("exp", exp); 
+        request.setAttribute("user", hola); 
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/hola.jsp");
+        rd.forward(request, response);
 		
-		exp = (ArrayList<Experiencia>)exDao.list();
-		
-		
-		ex.setDescripcion("Venta de nenas v3");
-		ex.setFunciones("Publicidad");
-		ex.setPeriodoinicio("2017");
-		ex.setPeriodofin("2019");
-		ex.setEgresadoBean(e);
-		ex.setId(Integer.parseInt(request.getParameter("id")));
-		exDao.update(ex);
 	}
 
 }
