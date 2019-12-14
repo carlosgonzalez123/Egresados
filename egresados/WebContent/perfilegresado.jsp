@@ -88,7 +88,9 @@
 				</div>
 			</div>
 		</div>
-		<button class="btn red txtwhite">Continuar</button>
+		<a href="regexperiencia.jsp" class="btn red txtwhite">Registrar Experiencia</a>
+		<a href="Lists" class="btn red txtwhite">Registrar Estudios</a>
+		
 	</form>
 </section>
 

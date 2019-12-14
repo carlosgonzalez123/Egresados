@@ -1,9 +1,15 @@
 package dao;
 
-public class EstudioDao {
+import egresados.*;
+import util.*;
 
-	public EstudioDao() {
-		// TODO Auto-generated constructor stub
-	}
+
+public class EstudioDao 
+extends Conexion<Estudio> 
+implements GenericDao<Estudio>{
+public EstudioDao() {
+	super(Estudio.class);
+}
+
 
 }

@@ -1,9 +1,16 @@
 package dao;
 
-public class ExperienciaDao {
 
-	public ExperienciaDao() {
-		// TODO Auto-generated constructor stub
-	}
+import util.*;
+import dao.*;
+import egresados.*;
+
+public class ExperienciaDao 
+extends Conexion<Experiencia> 
+implements GenericDao<Experiencia>{
+public ExperienciaDao() {
+	super(Experiencia.class);
+}
+
 
 }

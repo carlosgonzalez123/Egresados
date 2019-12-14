@@ -13,14 +13,14 @@ $(function(){
 $(document).on("click","#log",function(){
 user=$("#user").val();
 pass=$("#pass").val();
-ajax=ajax__("login",user,pass);
+ajax=ajax__("Login",user,pass);
 
 ajax.done(function(response){
 	if(response==="DONE/egresados"){
 			setTimeout(function(){
 				$("#log").html("BIENVENIDO!!");
 				setTimeout(function(){
-					window.location.replace("perfilegresado.html");	
+					window.location.replace("perfilegresado.jsp");	
 				},2000)
 			},2000);
 		}else{

@@ -1,0 +1,13 @@
+package util;
+
+import dao.NivelDao;
+import egresados.Usuario;
+
+public class main {
+	public static void main(String [] args) {
+		NivelDao nDao=new NivelDao();
+		Usuario u = (Usuario) nDao.getEm().createQuery("SELECT u FROM Usuario u WHERE u.email='jhoan@hotmail.com'").getSingleResult();
+		System.out.println("dato: "+ u.getEmail());
+	}
+
+}

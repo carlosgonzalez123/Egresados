@@ -2,7 +2,7 @@ package dao;
 
 
 
-import util.Conexion;
+import util.*;
 import dao.*;
 import egresados.*;
 

@@ -2,6 +2,7 @@ package servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,8 +13,9 @@ import egresados.Egresado;
 import egresados.Programa;
 
 /**
- * Servlet implementation class registrarrgresado
+ * Servlet implementation class RegistrarEgresado
  */
+@WebServlet("/RegistrarEgresado")
 public class RegistrarEgresado extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,7 +39,7 @@ public class RegistrarEgresado extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Egresado e = new Egresado();
+Egresado e = new Egresado();
 		
 		String clave=request.getParameter("clave");
 		e.setClave(clave);

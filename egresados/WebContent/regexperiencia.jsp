@@ -21,7 +21,7 @@
 		<img class="img-slider-login" src="imagen/portada.jpg">
 	</article>
 
-	<form class="container-form-reg">
+	<form class="container-form-reg"method="post" action="InsertarExperiencia">
 		<p class="txtlogin">Registrar Experiencia de Egresado</p>
 
 		<div class="container-cmp">
@@ -37,7 +37,7 @@
 		<div class="container-cmp">
 			<div class="contenedor-cmp">
 				<p class="txtform txtposition">Funciones</p>
-				<input id="" class="cmpform" type="" name="funcion">
+				<input id="" class="cmpform" type="" name="funciones">
 			</div>
 			<div class="icoverificacion">
 				<span class="icon-checkmark txtverde"></span>
@@ -48,7 +48,7 @@
 			<div class="container-cmp">
 				<div class="contenedor-cmp">
 					<p class="txtform txtposition">Fecha inicio</p>
-					<input id="" class="cmpform" type="" name="telefono">
+					<input id="" class="cmpform" type="" name="f_inicio">
 				</div>
 				<div class="icoverificacion">
 					<span class="icon-checkmark txtverde"></span>
@@ -57,7 +57,7 @@
 			<div class="container-cmp">
 				<div class="contenedor-cmp">
 					<p class="txtform txtposition">Fecha fin</p>
-					<input id="" class="cmpform" type="" name="telefono">
+					<input id="" class="cmpform" type="" name="f_final">
 				</div>
 				<div class="icoverificacion">
 					<span class="icon-checkmark txtverde"></span>
