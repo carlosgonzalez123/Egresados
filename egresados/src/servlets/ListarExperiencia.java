@@ -61,8 +61,9 @@ public class ListarExperiencia extends HttpServlet {
 		
 		String hola="hola";
 		request.setAttribute("exp", exp); 
-        request.setAttribute("user", hola); 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/hola.jsp");
+        request.setAttribute("user", e); 
+        request.setAttribute("hola", hola); //prueba 
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/listarExperiencia.jsp");
         rd.forward(request, response);
 		
 	}
