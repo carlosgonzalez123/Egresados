@@ -34,10 +34,10 @@
 		<table class="table">
 			<thead class="thead-dark">
 			<tr>
-				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
+				<th scope="col">Titulo</th>
+				<th scope="col">Nivel</th>
+				<th scope="col">Periodo fin</th>
+				<th scope="col">Lugar</th>
 			</tr>
 			</thead>
 			<tbody>
