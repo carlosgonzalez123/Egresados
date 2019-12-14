@@ -22,7 +22,7 @@
 	</article>
 
 	<div class="container-form-reg">
-		<p class="txtlogin">Ingresar la información</p>
+		<p class="txtlogin">Registrar egresado</p>
 		<div class="container-two-reg">
 			<div class="container-cmp">
 				<div class="contenedor-cmp">
